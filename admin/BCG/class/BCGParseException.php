@@ -2,24 +2,24 @@
 /**
  *--------------------------------------------------------------------
  *
- * Argument Exception
+ * Parse Exception
  *
  *--------------------------------------------------------------------
  * Copyright (C) Jean-Sebastien Goupil
  * http://www.barcodephp.com
  */
-class BCGArgumentException extends Exception {
-    protected $param;
+class BCGParseException extends Exception {
+    protected $barcode;
 
     /**
      * Constructor with specific message for a parameter.
      *
+     * @param string $barcode
      * @param string $message
-     * @param string $param
      */
-    public function __construct($message, $param) {
-        $this->param = $param;
-        parent::__construct($message, 20000);
+    public function __construct($barcode, $message) {
+        $this->barcode = $barcode;
+        parent::__construct($message, 10000);
     }
 }
 ?>
