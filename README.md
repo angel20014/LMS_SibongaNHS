@@ -36,3 +36,77 @@ snhs-library-management-system/
 └── README.md # Project documentation
 
 
+# 📥 How to Download, Install, and Use
+
+Follow these steps to set up and run the SNHS Library Management System on your computer:
+
+## 1️⃣ Download / Clone the Repository
+- Click the green **Code** button on this repository  
+- Choose **Download ZIP** and extract it, OR clone using Git:
+  ```
+  git clone https://github.com/your-username/snhs-library-management-system.git
+2️⃣ Install Requirements
+Make sure you have the following installed:
+
+XAMPP (for PHP & MySQL)
+
+Composer (for Laravel dependencies)
+
+Node.js (for frontend dependencies, optional)
+
+3️⃣ Set Up the Project
+Open the project folder in your terminal/command prompt
+
+Install Laravel dependencies:
+composer install
+Copy the example environment file:
+
+cp .env.example .env
+Generate the application key:
+
+
+php artisan key:generate
+4️⃣ Database Configuration
+Start XAMPP and make sure MySQL and Apache are running
+
+Create a database (example: snhs_library) in phpMyAdmin
+
+Update the .env file with your database info:
+
+makefile
+Copy code
+DB_DATABASE=snhs_library
+DB_USERNAME=root
+DB_PASSWORD=
+Run migrations to set up tables:
+
+php artisan migrate
+5️⃣ Run the Project
+Start the Laravel development server:
+
+
+php artisan serve
+Open your browser and visit:
+
+
+http://127.0.0.1:8000
+6️⃣ Default Login Accounts
+Use these credentials to access the system after installation:
+
+Admin → admin@gmail.com / password123
+
+Student → student@gmail.com / password123
+
+Teacher → teacher@gmail.com / password123
+
+7️⃣ Usage
+Admin can add/manage books, users, and generate reports
+
+Students can borrow/return books and view their records
+
+Teachers can borrow/return books and request resources
+
+
+
+
+
